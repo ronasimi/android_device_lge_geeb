@@ -13,6 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-TARGET_PREBUILT_KERNEL := device/lge/e973-kernel/kernel
-endif
+//ifeq ($(TARGET_PREBUILT_KERNEL),)
+//TARGET_PREBUILT_KERNEL := device/lge/e973-kernel/kernel
+//endif
