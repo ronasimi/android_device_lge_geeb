@@ -32,7 +32,8 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 
 TARGET_OTA_ASSERT_DEVICE := mako,geeb,gee_a,e970,gee,geebus,e973
 
-TARGET_MPDECISION_BOOST_SOCKET := /dev/socket/mpdecision/touchboost
+# Turn off touchboost logcat spamfest, touchboost still happens.
+TARGET_POWERHAL_NO_TOUCH_BOOST := true
 
 BOARD_USES_ALSA_AUDIO:= true
 BOARD_USES_LEGACY_ALSA_AUDIO:= false
