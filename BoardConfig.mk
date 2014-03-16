@@ -14,14 +14,16 @@
 # limitations under the License.
 #
 
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CFLAGS += -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfloat-abi=softfp
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
+TARGET_ARCH_VARIANT_CPU := cortex-a15
+TARGET_ARCH_VARIANT_FPU := neon-vfpv4
 
 TARGET_NO_BOOTLOADER := true
 
@@ -30,10 +32,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=geeb lpj=67677 user_debug=31
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 
-TARGET_OTA_ASSERT_DEVICE := mako,geeb,gee_a,e970,gee,geebus,e973
-
-# Turn off touchboost logcat spamfest, touchboost still happens.
-TARGET_POWERHAL_NO_TOUCH_BOOST := true
+TARGET_OTA_ASSERT_DEVICE := mako,geeb,gee_a,e970,gee,geebus,e973,e971
 
 BOARD_USES_ALSA_AUDIO:= true
 BOARD_USES_LEGACY_ALSA_AUDIO:= false
@@ -132,6 +131,17 @@ BOARD_SEPOLICY_UNION := \
 
 
 USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY:= true
+
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+# Shader cache config options
+# Maximum size of the  GLES Shaders that can be cached for reuse.
+# Increase the size if shaders of size greater than 12KB are used.
+MAX_EGL_CACHE_KEY_SIZE := 12*1024
+
+# Maximum GLES shader cache size for each app to store the compiled shader
+# binaries. Decrease the size if RAM or Flash Storage size is a limitation
+# of the device.
+MAX_EGL_CACHE_SIZE := 2048*1024
 
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
