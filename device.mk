@@ -97,11 +97,6 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
 	frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml
 
-
-# NFC firmware
-PRODUCT_COPY_FILES += \
-	device/lge/geeb/prebuilt/libpn544_fw.so:system/vendor/firmware/libpn544_fw.so
-
 # NFC packages
 PRODUCT_PACKAGES += \
     libnfc \
