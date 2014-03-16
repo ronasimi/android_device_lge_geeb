@@ -141,6 +141,7 @@ set_light_backlight(struct light_device_t* dev,
     pthread_mutex_lock(&g_lock);
     err = write_int(LCD_FILE, brightness);
     pthread_mutex_unlock(&g_lock);
+    set_light_buttons_from_backlight(state);
     return err;
 }
 
