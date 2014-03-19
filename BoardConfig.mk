@@ -14,14 +14,16 @@
 # limitations under the License.
 #
 
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CFLAGS += -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfloat-abi=softfp
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
+TARGET_ARCH_VARIANT_CPU := cortex-a15
+TARGET_ARCH_VARIANT_FPU := neon-vfpv4
 
 TARGET_NO_BOOTLOADER := true
 
@@ -32,7 +34,7 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 
 TARGET_KERNEL_CONFIG := geeb_defconfig
 
-TARGET_OTA_ASSERT_DEVICE := mako,geeb,gee_a,e970,gee,geebus,e973
+TARGET_OTA_ASSERT_DEVICE := mako,geeb,gee_a,e970,gee,geebus,e973,e971
 
 # Turn off touchboost logcat spamfest, touchboost still happens.
 TARGET_POWERHAL_NO_TOUCH_BOOST := true
