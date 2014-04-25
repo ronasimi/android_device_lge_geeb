@@ -39,6 +39,8 @@ ifneq ($(findstring svelte, $(TARGET_PRODUCT)),)
 LOCAL_KERNEL := device/lge/geeb_svelte-kernel/kernel
 else
 LOCAL_KERNEL := kernel/lge/geeb/arch/arm/boot/zImage
+endif
+
 
 PRODUCT_COPY_FILES := \
 	$(LOCAL_KERNEL):kernel
