@@ -14,5 +14,5 @@
 # limitations under the License.
 #
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-TARGET_PREBUILT_KERNEL := device/lge/e973-kernel/kernel
+TARGET_PREBUILT_KERNEL := kernel/lge/geeb/arch/arm/boot/zImage
 endif
