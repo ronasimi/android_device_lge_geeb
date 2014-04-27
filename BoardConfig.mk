@@ -159,4 +159,6 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 HAVE_ADRENO_SOURCE:= false
 
+SUPERUSER_EMBEDDED := true
+
 -include vendor/lge/gee/BoardConfigVendor.mk
