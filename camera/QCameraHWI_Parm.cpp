@@ -30,7 +30,7 @@
 #include <cutils/properties.h>
 #include <math.h>
 #if HAVE_ANDROID_OS
-//#include <linux/android_pmem.h>
+#include <linux/android_pmem.h>
 #endif
 #include <linux/ioctl.h>
 #include "QCameraParameters.h"
@@ -141,8 +141,6 @@ static struct camera_size_type zsl_picture_sizes[] = {
 };
 
 static camera_size_type default_picture_sizes[] = {
-  { 4208, 3120}, // 13MP
-  { 4128, 3096}, // 12.8MP
   { 4000, 3000}, // 12MP
   { 3264, 2448}, // 8MP
   { 3264, 1836}, // Picture Size to match 1080p,720p AR
