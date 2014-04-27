@@ -32,7 +32,7 @@
 #include <cutils/properties.h>
 #include <math.h>
 #if HAVE_ANDROID_OS
-#include <linux/android_pmem.h>
+//#include <linux/android_pmem.h>
 #endif
 #include <linux/ioctl.h>
 #include "QCameraParameters.h"

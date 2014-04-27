@@ -25,7 +25,7 @@
 #include "QCamera_Intf.h"
 
 extern "C" {
-#include <linux/android_pmem.h>
+//#include <linux/android_pmem.h>
 #include <linux/msm_ion.h>
 }
 
