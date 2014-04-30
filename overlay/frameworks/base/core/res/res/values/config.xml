@@ -22,14 +22,14 @@
     <!-- If this is true, the screen will fade off. -->
     <bool name="config_animateScreenLights">false</bool>
 
-    <!-- Default color for notification LED is Yellow. -->
-    <color name="config_defaultNotificationColor">#ffffff</color>
+    <!-- Default color for notification LED is RED. -->
+    <color name="config_defaultNotificationColor">#ff0000</color>
 
     <!-- Default LED on time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOn">500</integer>
+    <integer name="config_defaultNotificationLedOn">1000</integer>
 
     <!-- Default LED off time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOff">1000</integer>
+    <integer name="config_defaultNotificationLedOff">5000</integer>
 
     <!-- Default value for led color when battery is low on charge: <= 14% -->
     <integer name="config_notificationsBatteryLowARGB">0xFFFF0000</integer>
