@@ -50,6 +50,15 @@ PRODUCT_COPY_FILES += \
 	kernel/lge/geeb/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
 	device/lge/geeb/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin
 
+# sysinit for init.d
+PRODUCT_COPY_FILES += \
+	device/lge/geeb/prebuilt/sysinit:system/bin/sysinit
+
+#init.d tweaks
+PRODUCT_COPY_FILES += \
+    device/lge/geeb/init.d/99kerneltweaks:system/etc/init.d/99kerneltweaks \
+    device/lge/geeb/init.d/98netflix:system/etc/init.d/98netflix
+
 # Script for baseband name resolution
 PRODUCT_COPY_FILES += \
 	device/lge/geeb/fetch-swv:system/bin/fetch-swv \
@@ -106,6 +115,10 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
 	frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
 	frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml
+
+# Boot Animation
+PRODUCT_COPY_FILES += \
+	device/lge/geeb/media/bootanimation.zip:system/media/bootanimation.zip
 
 # NFC packages
 PRODUCT_PACKAGES += \

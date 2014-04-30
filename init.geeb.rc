@@ -514,6 +514,12 @@ service fetch-swv /system/bin/fetch-swv
     class late_start
     oneshot
 
+# sysinit (/system/etc/init.d)
+service sysinit /system/bin/sysinit
+    user root
+    oneshot
+    disabled
+
 # on property:gsm.sim.state=READY
 #    start diag_mdlog
 
