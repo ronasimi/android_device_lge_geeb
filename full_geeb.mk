@@ -22,11 +22,6 @@ PRODUCT_PACKAGES += \
         LiveWallpapers \
         LiveWallpapersPicker \
         VisualizationWallpapers \
-	Apollo \
-	DSPManager \
-	libcyanogen-dsp \
-	LockClock
-
 
 # Get the long list of APNs
 PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
@@ -45,5 +40,7 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 $(call inherit-product, device/lge/geeb/device.mk)
 $(call inherit-product-if-exists, vendor/lge/geeb/geeb-vendor.mk)
 
-# Enable CMFileManager
-PRODUCT_PACKAGES += CMFileManager
+# Enable CMFileManager and Torch
+PRODUCT_PACKAGES += \
+	CMFileManager \
+	Torch
