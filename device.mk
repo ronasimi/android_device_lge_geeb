@@ -120,6 +120,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/lge/geeb/media/bootanimation.zip:system/media/bootanimation.zip
 
+# Terminal emulator
+# Boot Animation
+PRODUCT_COPY_FILES += \
+	device/lge/geeb/prebuilt/Term.apk:system/app/Term.apk \
+	device/lge/geeb/prebuilt/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
+
 # NFC packages
 PRODUCT_PACKAGES += \
     libnfc \
